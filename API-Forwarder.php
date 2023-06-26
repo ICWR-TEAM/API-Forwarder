@@ -1,7 +1,7 @@
 <?php
 
 // PHP API Forwarder
-// Copyright (c)2022 - RND ICWR - Afrizal F.A
+// Copyright (c)2023 - RND ICWR - Afrizal F.A
 
 namespace APIForwarder;
 
