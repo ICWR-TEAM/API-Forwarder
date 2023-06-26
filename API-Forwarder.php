@@ -11,7 +11,7 @@ class API
     public function __construct()
     {
 
-        $this->domain = '';
+        $this->host = '';
         $this->ssl = '';
 
     }
@@ -57,11 +57,11 @@ class API
 
         if (!empty($_GET['path'])) {
 
-            $url = $protocol . $this->domain . "/" . $_GET['path'];
+            $url = $protocol . $this->host . "/" . $_GET['path'];
 
         } else {
 
-            $url = $protocol . $this->domain;
+            $url = $protocol . $this->host;
 
         }
 
@@ -70,7 +70,15 @@ class API
         foreach(getallheaders() as $key => $value)
         {
 
-            $headers []= $key . ": " . $value;
+            if (strtolower($key) == "host") {
+
+                $headers []= "$key: $this->host\r\n";
+
+            } else {
+
+                $headers []= "$key: $value\r\n";
+
+            }
 
         }
 
