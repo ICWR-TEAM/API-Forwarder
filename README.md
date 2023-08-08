@@ -2,5 +2,5 @@
 API Forwarder
 ###
 ```
-Accessing URL : http://localhost/API-Forwarder.php
+Accessing URL : http://localhost/example.php
 ```
